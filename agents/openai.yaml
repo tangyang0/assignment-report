@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assignment Reports"
+  short_description: "Create clean Markdown and PDF course assignments"
+  default_prompt: "Use $assignment-report to create or edit a course assignment with readable LaTeX formulas, compact typography, and verified PDF layout."
