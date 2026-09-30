@@ -41,6 +41,7 @@ Keep the requested content and evidence. Avoid inventing a cover subtitle, a sep
 - Use Kaiti/Kaiti SC for personal information when requested by the user.
 - Use a math font with textbook-like forms for displayed equations, such as STIX; keep displayed equations only modestly larger than body text.
 - Avoid unsupported Unicode subscripts, superscripts, norm glyphs, or Greek letters in ordinary body paragraphs. Put complex notation in LaTeX display equations instead.
+- Before delivery, scan the rendered/source text for unrendered linear math left in prose, such as `r^p`, `R_i`, `D=min(...)`, or literal `1/2` when a displayed equation is intended. Rewrite the prose or move the expression into Markdown LaTeX and a rendered PDF equation. Do not count LaTeX delimiters in the Markdown source itself as a defect.
 - Tables should use a light gray or light blue fill with black text, visible light borders, and alternating pale rows. Avoid dark backgrounds with low-contrast text.
 - For mixed Chinese/Latin paragraphs, use a CJK-aware line-breaking/justification strategy so English words, numbers, and formulas are not stretched apart.
 
@@ -56,5 +57,7 @@ Render the final PDF and inspect every page at readable resolution. Check:
 - tables have sufficient contrast and do not split awkwardly;
 - figures and captions are aligned and readable;
 - personal information is correct.
+- Formula QA includes both a visual check and a lightweight text scan of the source or extracted PDF text for stray caret/underscore notation. If the final PDF is rasterized, perform the scan before rasterization because an image-only PDF has no searchable text layer.
+- For multi-round model tests, label each finding by source: model-generated output, external program/visual measurement, assistant analysis, or user feedback. Do not present a later human correction as an independent model call.
 
 If the source is Markdown, verify that all display formulas remain valid LaTeX and that linked figures exist beside the source file.
