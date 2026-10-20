@@ -34,6 +34,7 @@ Keep the requested content and evidence. Avoid inventing a cover subtitle, a sep
 
 ## Compact academic layout
 
+- Center the assignment title and the student's name and student ID beneath it.
 - Start the first question on page one after the title and personal information; do not force a cover page unless requested.
 - Use bold for the title, question headings, section headings, “原题/译文/解答” labels, and table headers.
 - Keep headings with the paragraph that follows; never leave a heading alone at the bottom of a page.
@@ -66,7 +67,7 @@ Render the final PDF and inspect every page at readable resolution. Check:
 - formulas have readable superscripts, subscripts, and symbols;
 - tables have sufficient contrast and do not split awkwardly;
 - figures and captions are aligned and readable;
-- personal information is correct.
+- the assignment title, student name, and student ID are centered, and personal information is correct.
 - Formula QA includes both a visual check and a lightweight text scan of the source or extracted PDF text for stray caret/underscore notation. If the final PDF is rasterized, perform the scan before rasterization because an image-only PDF has no searchable text layer.
 - For multi-round model tests, label each finding by source: model-generated output, external program/visual measurement, assistant analysis, or user feedback. Do not present a later human correction as an independent model call.
 
